@@ -1,8 +1,12 @@
 # unistore ... with modifications
 
-**NOTE**: This is a modified version of [Jason Miller's unistore package](https://github.com/developit/unistore). There have been a few improvements, but the vast majority of the code remains unchanged. These changes are awaiting approval, and I will abandon this repo once my changes are merged upstream.
+**NOTE**: This is a modified version of [Jason Miller's unistore package](https://github.com/developit/unistore). There have been a few improvements, but the vast majority of the code remains unchanged. Changes (listed below) are awaiting approval, and I will abandon this repo once my changes are merged upstream.
 
------------------------------------
+- [Add TypeScript support for connecting class based components](https://github.com/developit/unistore/pull/107)
+- [Add better typing for setState](https://github.com/developit/unistore/pull/108)
+- [Expose ref to child components when connecting preact components](https://github.com/LukeLindsey/unistore/commit/8df16d8c8e2aa55542aad7fc1f64ad05bd0afdf4). PR isn't created for this one yet because I'm not sure what the best way to handle it is. Also, it's only for preact, so probably not ready to be merged.
+
+* * *
 
 > A tiny ~650b centralized state container with component bindings for [Preact] & [React].
 
@@ -155,7 +159,7 @@ store.setState({ a: 'b' });   // logs { a: 'b' }
 store.setState({ c: 'd' });   // logs { a: 'b', c: 'd' }
 ```
 
-Returns **[store](#store)** 
+Returns **[store](#store)**
 
 #### store
 
@@ -238,7 +242,7 @@ Generally, an entire application is wrapped in a single `<Provider>` at the root
 
 **Parameters**
 
-- `props` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+- `props` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)**
     -   `props.store` **Store** A {Store} instance to expose via context.
 
 ### Reporting Issues
